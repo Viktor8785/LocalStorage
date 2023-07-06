@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LocalStorage</title>
+    <!--link rel="stylesheet" href="css/style.css"-->
+   </head>
+  <body>
+    <input id="inp1">
+    <button id="butt1">Введите значение</button>
+    <button id="butt2">Считать localStorage</button>
+    <p id="ls1"></p>
+    <p id="ls2"></p>
+    <script>
+		const input = document.querySelector('#inp1');
+		const button1 = document.querySelector('#butt1');
+		const button2 = document.querySelector('#butt2');
+		const p1 = document.querySelector('#ls1');
+		const p2 = document.querySelector('#ls2');
+		
+		button1.addEventListener('click', function() {
+			localStorage.setItem('key', input.value);
+			p1.textContent = localStorage.getItem('key');
+		});
+		button2.addEventListener('click', function() {
+			p2.textContent = localStorage.getItem('key');
+		});
+		//let data = localStorage.getItem('key');
+		//if(data) {
+		//	p1.textContent = data;
+		//}
+    </script>
+  </body>
+</html>
+
