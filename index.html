@@ -6,14 +6,19 @@
     <title>LocalStorage</title>
     <!--link rel="stylesheet" href="css/style.css"-->
    </head>
-  <body>
-    <p id="ls1"></p>
-    <p id="ls2"></p>
+  <body style="margin: 0;">
+    <div style="height: 100vh; background-color: red;">
+		<p id="ls1"></p>
+		<p id="ls2"></p>
+		<!--p id="ls3"></p-->
+	</div>
     <script>
 		const p1 = document.querySelector('#ls1');
 		const p2 = document.querySelector('#ls2');
+		const p3 = document.querySelector('#ls3');
 			p1.textContent = window.innerWidth;
 			p2.textContent = window.innerHeight;
+			//p3.textContent = window.innerHeight;
     </script>
   </body>
 </html>
